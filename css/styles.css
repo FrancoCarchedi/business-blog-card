@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins&display=swap');
+
+:root {
+
+  /* Font Size */
+  --title-font-size: 1.5rem;
+  --body-font-size: 1rem;
+  --small-font-size: 0.875rem;
+
+  /* Font Family */
+  --title-font-family: 'Poppins', sans-serif;
+  --body-font-family: 'Lato', sans-serif;
+
+  /* Colors */
+  --page-background-color: #f2f5f9;
+  --card-background-color: #ffffff;
+  --title-color: #111729;
+  --text-color: #677489;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--page-background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card__container {
+  background-color: var(--card-background-color);
+  width: 470px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.card__image {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  background-image: url("../images/hero-image-business-card.png");
+  background-size: cover;
+}
+
+.card__image::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; /* Ajusta la altura del overlay según tus necesidades */
+  background-image: url("../images/white-overlay.svg"); /* Imagen SVG de fondo como overlay */
+  background-size: cover; /* Ajusta el tamaño del overlay */
+}
+
+
+
+.card__content {
+  padding-top: 16px;
+  padding-inline: 32px;
+  padding-bottom: 16px;
+}
+
+.card__content-title {
+  font-family: var(--title-font-family);
+  font-size: var(--title-font-size);
+  color: var(--title-color);
+  margin-bottom: 0.75rem;
+}
+
+.card__content-description {
+  font-family: var(--title-font-family);
+  font-size: var(--body-font-family);
+  color: var(--text-color);
+  margin-bottom: 0.75rem;
+}
+
+.divider {
+  border: 1px solid var(--page-background-color);
+}
+
+.card__footer {
+  padding: 32px;
+  display: flex;
+  gap: 1rem;
+}
+
+.avatar {
+  width: 36px;
+  border: 3px solid var(--page-background-color);
+  border-radius: 50%;
+}
+
+.author-name {
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size);
+  color: var(--title-color);
+}
+
+.author-profession {
+  font-family: var(--body-font-family);
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  color: var(--text-color);
+}
